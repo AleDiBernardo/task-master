@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Task Master</strong></h1>
+        <form>
+            <input type="text" id="item" placeholder="Aggiungi un'attività...">
+            <select id="importance" onchange="updateImportance()">
+                <option value="none">Nessuna</option>
+                <option value="low">Bassa</option>
+                <option value="medium">Media</option>
+                <option value="high">Alta</option>
+            </select>
+            <button type="button" onclick="addItem()">Aggiungi</button>
+        </form>
+        <ul id="list"></ul>
+    </div>
+
+    <!-- Barra laterale -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-sidebar" onclick="closeSidebar()">&times;</span>
+        <p id="sidebarText"></p>
+    </div>
+</body>
+</html>
